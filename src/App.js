@@ -13,6 +13,7 @@ import Tricks from './Tricks';
 import Health from './Health';
 import Register from './Register';
 import 'font-awesome/css/font-awesome.min.css';
+import Logout from './Logout';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Tricks' element={<Tricks/>}/>
         <Route path='/Health' element={<Health/>}/>
+        <Route path='/Logout' element={<Logout/>}/>
         
 
 

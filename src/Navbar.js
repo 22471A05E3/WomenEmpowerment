@@ -24,6 +24,7 @@ export default function Navbar1() {
                             <li><Link to="/Tricks">SelfDefence</Link></li>
                             <li><Link to="/Health">Health</Link></li>
                             <li><Link to="/Contact">Contact Us</Link></li>
+                            <li><Link to="/Logout">Logout</Link></li>
                         </ul>
                     </nav>
                     <div className="hamburger" onClick={toggleSideNav}>
@@ -41,6 +42,7 @@ export default function Navbar1() {
                     <li><Link to="/Tricks">SelfDefence</Link></li>
                     <li><Link to="/Health">Health</Link></li>
                     <li><Link to="/Contact">Contact Us</Link></li>
+                    <li><Link to="/Logout">Logout</Link></li>
                 </ul>
             </div>
         </div>
