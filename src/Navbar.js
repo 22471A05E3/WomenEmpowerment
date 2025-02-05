@@ -1,32 +1,39 @@
-import React from 'react'
-import './Navbar.css'
-import { BrowserRouter,Route,Routes,Link } from 'react-router-dom'
-import Home from './Home'
-import About from './About'
-import Navbar from './Navbar'
-import Login from './Login'
-import Safety from './Safety'
-import Emergency from './Emergency'
-import Contact from './Contact'
-import Tricks from './Tricks'
-import Health from './Health'
+import React, { useState } from 'react';
+import './Navbar.css';
+import { Link } from 'react-router-dom';
 
+export default function Navbar1() {
+    const [isSideNavActive, setSideNavActive] = useState(false);
 
+    const toggleSideNav = () => {
+        setSideNavActive(!isSideNavActive);
+    };
 
-export default function Navbar1(){
-    return(
-        <>
-       
+    return (
         <div className='back'>
-        {/* <BrowserRouter> */}
-        
-        
-        <header>
-        <img className="logo" src="https://img.freepik.com/premium-vector/modern-feminism-concept-with-flat-design_23-2147954719.jpg?semt=ais_hybrid"/>
+            <header>
+                <img className="logo" src="https://img.freepik.com/premium-vector/modern-feminism-concept-with-flat-design_23-2147954719.jpg?semt=ais_hybrid" alt="Logo"/>
 
-        <div class="nav-bar">
-            <nav>
-                <ul className="nav_links">
+                <div className="nav-bar">
+                    <nav>
+                        <ul className="nav_links">
+                            <li><Link to="/Home">Home</Link></li>
+                            <li><Link to="/About">About</Link></li>
+                            <li><Link to="/Safety">Safety</Link></li>
+                            <li><Link to="/Emergency">Emergency</Link></li>
+                            <li><Link to="/Tricks">SelfDefence</Link></li>
+                            <li><Link to="/Health">Health</Link></li>
+                            <li><Link to="/Contact">Contact Us</Link></li>
+                        </ul>
+                    </nav>
+                    <div className="hamburger" onClick={toggleSideNav}>
+                        &#9776;
+                    </div>
+                </div>
+            </header>
+
+            <div className={`side-nav ${isSideNavActive ? 'active' : ''}`}>
+                <ul>
                     <li><Link to="/Home">Home</Link></li>
                     <li><Link to="/About">About</Link></li>
                     <li><Link to="/Safety">Safety</Link></li>
@@ -34,21 +41,8 @@ export default function Navbar1(){
                     <li><Link to="/Tricks">SelfDefence</Link></li>
                     <li><Link to="/Health">Health</Link></li>
                     <li><Link to="/Contact">Contact Us</Link></li>
-
-                    
-
                 </ul>
-                
-
-            </nav>
+            </div>
         </div>
-        </header>
-       
-        
-
-        
-        </div>
-        
-      </>
-    )
+    );
 }

@@ -10,7 +10,7 @@
     margin-right: auto;
 }
 
-li, a, .Link {
+li, a {
     font-size: 23px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 600;
@@ -20,31 +20,25 @@ li, a, .Link {
 
 header {
     display: flex;
-    justify-content: space-between; /* Space out the logo and navigation */
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 30px; /* Adjusted padding for better spacing */
+    padding: 20px 30px;
     height: 60px;
     background-color: #DA70D6;
     position: sticky;
     top: 0;
-    margin: 0;
     z-index: 1000;
 }
 
-.logo {
-    margin-right: auto;
-    font-size: 30px;
-    padding-left: 20px;
-}
-
-span {
-    color: #e71111;
+.nav-bar {
+    display: flex;
+    align-items: center;
 }
 
 .nav_links {
     list-style: none;
     display: flex;
-    gap: 20px; /* Space between navigation items */
+    gap: 20px;
 }
 
 .nav_links li {
@@ -57,55 +51,86 @@ span {
     text-shadow: 1px 1px 10px aquamarine;
 }
 
-.nav_links li:hover::before {
-    width: 80%;
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
-/* Mobile responsiveness */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100%;
+    width: 250px;
+    background-color: #DA70D6;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.side-nav.active {
+    left: 0;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 50px 20px;
+}
+
+.side-nav li {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.side-nav li:hover {
+    text-shadow: none;
+}
+
 @media (max-width: 768px) {
     header {
-        padding: 15px; /* Reduce padding for smaller screens */
+        padding: 15px;
         justify-content: space-between;
     }
 
     .logo {
-        font-size: 24px; /* Slightly smaller logo for mobile */
+        font-size: 24px;
     }
 
     .nav_links {
-        flex-direction: column; /* Stack navigation items vertically */
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background-color: #DA70D6;
-        width: 100%;
         display: none;
-        flex-grow: 1;
     }
 
-    .nav_links li {
+    .hamburger {
+        display: block;
+    }
+
+    .side-nav {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        height: 100%;
+        width: 250px;
+        background-color: #DA70D6;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .side-nav.active {
+        left: 0;
+    }
+
+    .side-nav ul {
+        list-style: none;
+        padding: 50px 20px;
+    }
+
+    .side-nav li {
         padding: 15px 0;
-        width: 100%; /* Make each nav item take full width */
         text-align: center;
     }
 
-    .nav_links.active {
-        display: block; /* Show the navigation menu when active */
-    }
-
-    .nav_links li:hover {
-        text-shadow: none; /* Optional: Disable text-shadow on hover for mobile */
-    }
-
-    /* Add a hamburger menu icon for mobile */
-    .hamburger {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        color: white;
-    }
-
-    .hamburger.active + .nav_links {
-        display: flex; /* Display menu when hamburger is clicked */
+    .side-nav li:hover {
+        text-shadow: none;
     }
 }
