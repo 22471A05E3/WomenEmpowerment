@@ -1,0 +1,83 @@
+/* Container to center content */
+.home-remedies-container {
+    padding: 40px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+/* Main Heading */
+h1 {
+    margin-top: 40px;
+    color: #DA70D6;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Card container (grid layout) */
+.card3-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+/* Individual Card (now renamed to card3) */
+.card3 {
+    display: flex;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 250px; /* Adjusted height without images */
+    transition: transform 0.3s;
+    text-align: left;
+}
+
+/* Card Hover Effect */
+.card3:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content (renamed to card-content4) */
+.card-content4 {
+    flex-grow: 1;
+}
+
+/* Card Title */
+.card-content4 h2 {
+    color: #DA70D6;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Card Paragraph */
+.card-content4 p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .card3-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .card3-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card3 {
+        width: 90%;
+    }
+}

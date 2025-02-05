@@ -1,0 +1,80 @@
+/* Sidenav.css */
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hide the sidenav */
+  width: 250px;
+  height: 100%;
+  background-color: #DA70D6;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+.sidenav.active {
+  left: 0; /* Slide in from the left */
+}
+
+.sidenav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidenav-links li {
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.sidenav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.sidenav-links li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  z-index: 1500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+.close-btn i {
+  font-size: 30px;
+}
+
+.sidenav-links li a {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+/* Add a little space between each link */
+.sidenav-links li {
+  padding: 15px;
+}
+
+/* Hover effect for items */
+.sidenav-links li:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,103 @@
+body {
+    margin-top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.title {
+    text-align: center;
+    padding: 50px 0 20px;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #DA70D6;
+    font-weight: bold;
+    margin-top: 40px;
+    text-shadow: 0px 10px 10px rgb(0, 0, 0);
+}
+
+.container {
+    width: 50%;
+    height: 400px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: 0 15px 40px black;
+}
+
+.container .left {
+    float: left;
+    width: 50%;
+    height: 400px;
+    background: url(https://img.freepik.com/free-photo/view-purple-women-figurines-womens-day-celebration_23-2151257723.jpg?t=st=1735971285~exp=1735974885~hmac=217fd93ec11b95b614956276ed552f01dc29f96505e95d25fa931d0a1a266cd0&w=996);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+
+.container .right {
+    float: right;
+    width: 50%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.form-box {
+    width: 100%;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    height: 400px;
+    background: white;
+}
+
+.form-box p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: #000;
+    font-size: 20px;
+}
+
+.form-box input {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-box input[type='email'],
+.form-box input[type='password'] {
+    border: none;
+    border-bottom: 2px solid #DA70D6;
+    outline: none;
+    height: 40px;
+}
+
+.form-box input[type='text']:focus,
+.form-box input[type='password']:focus {
+    border-bottom: 2px solid black;
+}
+
+.form-box button[type='submit'] {
+    border: none;
+    outline: none;
+    height: 40px;
+    color: white;
+    background: #DA70D6;
+    width: 100%;
+}
+
+.form-box button[type='submit']:hover {
+    background: #DA70D6;
+}
+
+.form-box button[type='submit'],
+h1 {
+    text-align: center;
+}
+
+.form-box p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.reg{
+    color: #DA70D6;
+}

@@ -1,0 +1,74 @@
+
+.home{
+  background-image: url(https://blog.empuls.io/content/images/2023/05/quotes-on-women-empowerment.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+.home-page {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  background-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  max-width: 400px;
+  margin-right: 10px;
+  text-align: right;
+  color: black;
+}
+
+.content h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+  
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.emergency-button {
+  background-color: red;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  
+}
+
+.emergency-button:hover {
+  background-color:#DA70D6;
+  color:black;
+}
+
+.panic-button {
+  background-color: #FF4500;
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 150px;
+  right: 50px;
+}
+
+.panic-button:hover {
+  background-color: #FF6347;
+}
+

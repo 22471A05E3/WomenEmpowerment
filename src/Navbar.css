@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 90px;
+    height: 50px;
+    margin-right: auto;
+}
+
+li, a, .Link {
+    font-size: 23px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(246, 239, 239);
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space out the logo and navigation */
+    align-items: center;
+    padding: 20px 30px; /* Adjusted padding for better spacing */
+    height: 60px;
+    background-color: #DA70D6;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+span {
+    color: #e71111;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between navigation items */
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0 10px;
+    position: relative;
+}
+
+.nav_links li:hover {
+    text-shadow: 1px 1px 10px aquamarine;
+}
+
+.nav_links li:hover::before {
+    width: 80%;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px; /* Reduce padding for smaller screens */
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 24px; /* Slightly smaller logo for mobile */
+    }
+
+    .nav_links {
+        flex-direction: column; /* Stack navigation items vertically */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #DA70D6;
+        width: 100%;
+        display: none;
+        flex-grow: 1;
+    }
+
+    .nav_links li {
+        padding: 15px 0;
+        width: 100%; /* Make each nav item take full width */
+        text-align: center;
+    }
+
+    .nav_links.active {
+        display: block; /* Show the navigation menu when active */
+    }
+
+    .nav_links li:hover {
+        text-shadow: none; /* Optional: Disable text-shadow on hover for mobile */
+    }
+
+    /* Add a hamburger menu icon for mobile */
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+
+    .hamburger.active + .nav_links {
+        display: flex; /* Display menu when hamburger is clicked */
+    }
+}
