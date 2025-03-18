@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './Login.css';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase'; // Import Firebase authentication
+import { auth } from './firebase'; 
 
 export default function Login() {
     const navigate = useNavigate();
 
-    const [formData, setFormData] = useState({ email: "", password: "" }); // No default email/password
+    const [formData, setFormData] = useState({ email: "", password: "" });
     const [isLogin, setIsLogin] = useState(false);
     const [error, setError] = useState("");
 
@@ -19,13 +19,12 @@ export default function Login() {
         e.preventDefault();
 
         try {
-            // Firebase login with email and password
             await signInWithEmailAndPassword(auth, formData.email, formData.password);
             setIsLogin(true);
-            navigate("/home"); // Redirect to home page after successful login
+            navigate("/home");
         } catch (err) {
             setIsLogin(false);
-            setError("Invalid credentials. Please try again."); // Show error message if login fails
+            setError("Invalid credentials. Please try again.");
         }
     };
 
@@ -37,7 +36,7 @@ export default function Login() {
                     <div className="left"></div>
                     <div className="right">
                         <div className="form-box">
-                            <form onSubmit={handleSubmit}> {/* Handle form submission properly */}
+                            <form onSubmit={handleSubmit}>
                                 <p>Email</p>
                                 <input
                                     type="email"
@@ -57,15 +56,13 @@ export default function Login() {
                                 <button type="submit">
                                     Submit
                                 </button>
-
-                               
                             </form>
 
-                            {error && <p style={{ color: 'red' }}>{error}</p>} {/* Display error message */}
+                            {error && <p style={{ color: 'red' }}>{error}</p>}
 
                             <p>
                                 Don't have an account?{' '}
-                                <a  className="reg" href="#" onClick={() => navigate("/register")}>
+                                <a className="reg" href="#" onClick={() => navigate("/register")}>
                                     Register
                                 </a>
                             </p>

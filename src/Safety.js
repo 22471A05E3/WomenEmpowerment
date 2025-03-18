@@ -1,5 +1,5 @@
 import React from 'react';
-import './Safety1.css'; // Import the CSS for styling
+import './Safety1.css';
 import Navbar from './Navbar';
 
 const Safety = () => {
